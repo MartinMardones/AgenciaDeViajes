@@ -1,0 +1,76 @@
+package org.example;
+
+public class Cliente {
+    private String nombre;
+    private String apellido;
+
+    private String segundoApellido;
+    private String rut;
+    private String destino;
+    private String correoElectronico;
+
+
+
+    public String getNombre() {
+        return this.nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return this.apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public String getSegundoApellido() {
+        return this.segundoApellido;
+    }
+
+    public void setSegundoApellido(String segundoApellido) {
+        this.segundoApellido = segundoApellido;
+    }
+
+    public String getRut() {
+        return this.rut;
+    }
+
+    public void setRut(String rut) {
+        this.rut = rut;
+    }
+
+    public String getDestino() {
+        return this.destino;
+    }
+
+    public void setDestino(String destino) {
+        this.destino = destino;
+    }
+
+
+    public String getCorreoElectronico() {
+        return this.correoElectronico;
+    }
+
+    public void setCorreoElectronico(String correoElectronico) {
+        this.correoElectronico = correoElectronico;
+    }
+
+    public Cliente(String nombre, String apellido, String rut, String correoElectronico) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.segundoApellido = segundoApellido;
+        this.rut = rut;
+        this.destino = destino;
+        this.correoElectronico = correoElectronico;
+    }
+
+    public String toString(){
+        return "Nombre: "+this.nombre+" "+this.apellido+" "+this.segundoApellido+", rut: "+this.rut+", destino: "+this.destino+", correo electronico "+this.correoElectronico;
+    }
+
+}
