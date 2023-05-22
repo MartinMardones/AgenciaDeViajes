@@ -1,65 +1,66 @@
 package org.example;
 
 public class Vendedor {
-    private String nombre;
-    private String apellido;
-    private String segundoApellido;
-    private String rut;
-    private String correoElectronico;
+    private String nombreV;
+    private String apellidoV;
+    private String segundoApellidoV;
+    private String rutV;
+    private String correoElectronicoV;
 
 
 
     public String getNombre() {
-        return this.nombre;
+        return this.nombreV;
     }
 
     public void setNombre(String nombre) {
-        this.nombre = nombre;
+        this.nombreV = nombre;
     }
 
     public String getApellido() {
-        return this.apellido;
+        return this.apellidoV;
     }
 
     public void setApellido(String apellido) {
-        this.apellido = apellido;
+        this.apellidoV = apellido;
     }
 
     public String getSegundoApellido() {
-        return this.segundoApellido;
+        return this.segundoApellidoV;
     }
 
     public void setSegundoApellido(String segundoApellido) {
-        this.segundoApellido = segundoApellido;
+        this.segundoApellidoV = segundoApellido;
     }
 
     public String getRut() {
-        return this.rut;
+        return this.rutV;
     }
 
     public void setRut(String rut) {
-        this.rut = rut;
+        this.rutV = rut;
     }
 
 
     public String getCorreoElectronico() {
-        return this.correoElectronico;
+        return this.correoElectronicoV;
     }
 
     public void setCorreoElectronico(String correoElectronico) {
-        this.correoElectronico = correoElectronico;
+        this.correoElectronicoV = correoElectronico;
     }
 
-    public Vendedor(String nombre, String apellido, String rut, String correoElectronico) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.segundoApellido = segundoApellido;
-        this.rut = rut;
-        this.correoElectronico = correoElectronico;
+    public Vendedor(String nombre, String apellido, String rut, String correoElectronico, String electronico) {
+        this.nombreV = nombre;
+        this.apellidoV = apellido;
+        this.segundoApellidoV = segundoApellidoV;
+        this.rutV = rut;
+        this.correoElectronicoV = correoElectronico;
     }
 
     public String toString(){
-        return "Nombre: "+this.nombre+" "+this.apellido+" "+this.segundoApellido+", rut: "+this.rut+", correo electronico "+this.correoElectronico;
+        return "Nombre: "+this.nombreV+" "+this.apellidoV+" "+this.segundoApellidoV+", rut: "+this.rutV+", correo electronico "+this.correoElectronicoV;
     }
+
 
 }
