@@ -1,0 +1,44 @@
+package org.example;
+
+public class Venta {
+    private Cliente cliente;
+    private Vendedor vendedor;
+    private Ciudad ciudad;
+    public String getCliente() {
+        return this.cliente;
+    }
+
+    public void setCliente(String cliente) {
+        this.cliente = cliente;
+    }
+
+    public String getVendedor() {
+        return this.vendedor;
+    }
+
+    public void setVendedor(String vendedor) {
+        this.vendedor = vendedor;
+    }
+
+    public String getCiudad() {
+        return this.ciudad;
+    }
+
+    public void setCiudad(String ciudad) {
+        this.ciudad = ciudad;
+    }
+
+
+    public Venta(String Cliente, String Vendedor, String Ciudad) {
+        this.cliente = cliente;
+        this.vendedor = vendedor;
+        this.ciudad = ciudad;
+    }
+
+    public String toString(){
+        return "Venta realizada por el vendedor: "+this.vendedor+", A nombre de: "+this.cliente+", Con destino a: "+this.ciudad+".";
+    }
+
+
+
+}
