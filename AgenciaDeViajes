@@ -1,0 +1,110 @@
+package org.example;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class AgenciaDeViajes {
+
+    private List<Cliente> clientes;
+    private List<Vendedor> vendedores;
+    private List<Ciudad> ciudades;
+
+    private List<Venta> ventas;
+
+    public AgenciaDeViajes(){
+        this.clientes = new ArrayList<>();
+        this.vendedores = new ArrayList<Vendedor> ();
+        this.ciudades = new ArrayList<> ();
+        this.ventas = new ArrayList<> ();
+    }
+    public boolean agregarCliente(String nombre, String apellido, String segundoApellido, String rut, String destino, String correoElectronico){
+        if(buscarCliente(rut,nombre) == null) {
+            Cliente cliente = new Cliente (nombre, apellido, segundoApellido, rut, destino, correoElectronico);
+            this.clientes.add(cliente);
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    public boolean agregarCliente(Cliente cliente){
+        if(buscarCliente(cliente.getRut(),cliente.getNombre()) == null){
+            this.clientes.add(cliente);
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+
+    public Cliente buscarCliente(String rut, String nombre){
+        for(Cliente cliente : this.clientes){
+            if(cliente.getNombre().equals(nombre) && cliente.getRut().equals(rut)){
+                return cliente;
+            }
+        }
+        return null;
+    }
+    public List buscarCliente(String nombre, String alexis, String raul){
+        ArrayList<Cliente> clientes = new ArrayList<>();
+        for(Cliente cliente : this.clientes){
+            if(cliente.getNombre().equals(nombre)){
+                clientes.add(cliente);
+            }
+        }
+        return clientes;
+    }
+
+
+    public boolean agregarVendedor(String nombre, String apellido, String segundoApellido, String rut, String correoElectronico){
+        if(buscarVendedor(rut,nombre) == null) {
+            Vendedor vendedor = new Vendedor (nombre, apellido, segundoApellido, rut, correoElectronico);
+            this.vendedores.add(vendedor);
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    public boolean agregarVendedor(Vendedor vendedor){
+        if(buscarVendedor(vendedor.getRut(),vendedor.getNombre()) == null){
+            this.vendedores.add(vendedor);
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    public Vendedor buscarVendedor(String rut, String nombre){
+        for(Vendedor vendedor : this.vendedores){
+            if(vendedor.getNombre().equals(nombre) && vendedor.getRut().equals(rut)){
+                return vendedor;
+            }
+        }
+        return null;
+    }
+    public List buscarVendedor(String nombre){
+        ArrayList<Vendedor> vendedores = new ArrayList<> ();
+        for(Vendedor vendedor : this.vendedores){
+            if(vendedor.getNombre().equals(nombre)){
+                vendedores.add(vendedor);
+            }
+        }
+        return vendedores;
+    }
+
+    public boolean eliminarVendedor(String rut, String nombre){
+        Vendedor vendedor= this.buscarVendedor (rut,nombre);
+        if(vendedor != null){
+            this.vendedores.remove(vendedor);
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+
+}
