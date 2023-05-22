@@ -1,0 +1,46 @@
+package org.example;
+
+public class Ciudad {
+    private String nombreCiudad;
+    private int precio;
+
+    private int horasDeViaje;
+
+    public String getNombreCiudad() {
+        return this.nombreCiudad;
+    }
+
+    public void setNombreCiudad(String nombreCiudad) {
+        this.nombreCiudad = nombreCiudad;
+    }
+
+    public int getPrecio() {
+        return this.precio;
+    }
+
+    public void setPrecio(int precio) {
+        this.precio = precio;
+    }
+
+    public int getHorasDeViaje() {
+        return this.horasDeViaje;
+    }
+
+    public void setHorasDeViaje(int horasDeViaje) {
+        this.horasDeViaje = horasDeViaje;
+    }
+
+    public Ciudad(String nombreCiudad, int precio, int horasDeViaje) {
+        this.nombreCiudad = nombreCiudad;
+        this.precio = precio;
+        this.horasDeViaje = horasDeViaje;
+    }
+
+    public String toString(){
+        return "Nombre de la ciudad de destino: "+this.nombreCiudad+", Precio del viaje: "+this.precio+", Horas de viaje: "+this.horasDeViaje+".";
+    }
+
+
+
+
+}
