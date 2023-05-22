@@ -106,5 +106,13 @@ public class AgenciaDeViajes {
         }
     }
 
+    public void agregarVenta(String cliente, String vendedor, String ciudad){
+            Venta venta = new Venta (cliente, vendedor, ciudad);
+            this.ventas.add(venta);
+
+    }
+
+
+
 
 }
