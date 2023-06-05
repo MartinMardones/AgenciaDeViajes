@@ -1,66 +1,35 @@
 package org.example;
 
-public class Vendedor {
-    private String nombreV;
-    private String apellidoV;
-    private String segundoApellidoV;
-    private String rutV;
-    private String correoElectronicoV;
+public class Vendedor extends Persona {
 
+    private String cargo;
 
+    private int añosTrabajando;
 
-    public String getNombre() {
-        return this.nombreV;
+    public String getCargo() {
+        return this.cargo;
     }
 
-    public void setNombre(String nombre) {
-        this.nombreV = nombre;
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
     }
 
-    public String getApellido() {
-        return this.apellidoV;
+    public int getAñosTrabajando() {
+        return this.añosTrabajando;
     }
 
-    public void setApellido(String apellido) {
-        this.apellidoV = apellido;
+    public void setAñosTrabajando(int añosTrabajando) {
+        this.añosTrabajando = añosTrabajando;
     }
 
-    public String getSegundoApellido() {
-        return this.segundoApellidoV;
+    public Vendedor(String nombre, String apellido, String segundoApellido, String rut, String correoElectronico, int edad, String cargo, int añosTrabajando) {
+        super(nombre, apellido, segundoApellido, rut, correoElectronico, edad);
+        this.cargo = cargo;
+        this.añosTrabajando = añosTrabajando;
     }
 
-    public void setSegundoApellido(String segundoApellido) {
-        this.segundoApellidoV = segundoApellido;
+    public String toString() {
+        return super.nombre + "," + super.apellido + "," + super.segundoApellido + "," + super.rut + "," + super.correoElectronico + "," + super.edad + "," + this.cargo + "," + this.añosTrabajando;
     }
-
-    public String getRut() {
-        return this.rutV;
-    }
-
-    public void setRut(String rut) {
-        this.rutV = rut;
-    }
-
-
-    public String getCorreoElectronico() {
-        return this.correoElectronicoV;
-    }
-
-    public void setCorreoElectronico(String correoElectronico) {
-        this.correoElectronicoV = correoElectronico;
-    }
-
-    public Vendedor(String nombre, String apellido, String rut, String correoElectronico, String electronico) {
-        this.nombreV = nombre;
-        this.apellidoV = apellido;
-        this.segundoApellidoV = segundoApellidoV;
-        this.rutV = rut;
-        this.correoElectronicoV = correoElectronico;
-    }
-
-    public String toString(){
-        return "Nombre: "+this.nombreV+" "+this.apellidoV+" "+this.segundoApellidoV+", rut: "+this.rutV+", correo electronico "+this.correoElectronicoV;
-    }
-
 
 }
