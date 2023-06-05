@@ -1,0 +1,74 @@
+package org.example;
+
+public class Persona {
+    protected String nombre;
+    protected String apellido;
+
+    protected String segundoApellido;
+    protected String rut;
+
+    protected String correoElectronico;
+
+    protected int edad;
+
+    public String getNombre() {
+        return this.nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return this.apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public String getSegundoApellido() {
+        return this.segundoApellido;
+    }
+
+    public void setSegundoApellido(String segundoApellido) {
+        this.segundoApellido = segundoApellido;
+    }
+
+    public String getRut() {
+        return this.rut;
+    }
+
+    public void setRut(String rut) {
+        this.rut = rut;
+    }
+
+    public String getCorreoElectronico() {
+        return this.correoElectronico;
+    }
+
+    public void setCorreoElectronico(String correoElectronico) {
+        this.correoElectronico = correoElectronico;
+    }
+
+    public int getEdad() {
+        return this.edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public Persona(String nombre, String apellido, String segundoApellido, String rut, String correoElectronico, int edad) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.segundoApellido = segundoApellido;
+        this.rut = rut;
+        this.edad = edad;
+        this.correoElectronico = correoElectronico;
+    }
+
+    public String toString(){
+        return "Nombre: "+this.nombre+" "+this.apellido+" "+this.segundoApellido+", rut: "+this.rut+", edad: "+this.edad+", correo electronico "+this.correoElectronico;
+    }
+}
