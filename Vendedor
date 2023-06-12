@@ -32,4 +32,9 @@ public class Vendedor extends Persona {
         return super.nombre + "," + super.apellido + "," + super.segundoApellido + "," + super.rut + "," + super.correoElectronico + "," + super.edad + "," + this.cargo + "," + this.añosTrabajando;
     }
 
+    public  String getTipo(){
+        String vendedor = null;
+        return vendedor;
+    }
+
 }
