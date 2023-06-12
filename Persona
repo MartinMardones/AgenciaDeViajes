@@ -1,6 +1,6 @@
 package org.example;
 
-public class Persona {
+public abstract class Persona {
     protected String nombre;
     protected String apellido;
 
@@ -71,4 +71,6 @@ public class Persona {
     public String toString(){
         return "Nombre: "+this.nombre+" "+this.apellido+" "+this.segundoApellido+", rut: "+this.rut+", edad: "+this.edad+", correo electronico "+this.correoElectronico;
     }
+
+    public abstract String getTipo();
 }
