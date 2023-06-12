@@ -22,5 +22,10 @@ public class Cliente extends Persona {
         return super.nombre + "," + super.apellido + "," + super.segundoApellido + "," + super.rut + "," + super.correoElectronico + "," + super.edad + "," + this.destino;
     }
 
+    public  String getTipo(){
+        String cliente = null;
+        return cliente;
+    }
+
 
    }
