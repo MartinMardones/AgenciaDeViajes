@@ -112,6 +112,32 @@ public class AgenciaDeViajes {
 
     }
 
+public void cantidadClientes() {
+		int cantidadClientes = clientes.size();
+		System.out.println("Cantidad de clientes: " + cantidadClientes);
+	}
+	public void cantidadVendedores() {
+		int cantidadVendedores = agentes.size();
+		System.out.println("Cantidad de vendedores: " + cantidadVendedores);
+	}
+
+
+public List<Persona> personasMayores30Años() {
+		List<Persona> personasMayores30 = new ArrayList<>();
+		for (Cliente cliente : clientes) {
+			int edad = cliente.getEdad();
+			if (edad > 30) {
+				personasMayores30.add(cliente);
+			}
+		}
+		for (AgenteViaje agente : agentes) {
+			int edad = agente.getEdad();
+			if (edad > 30) {
+				personasMayores30.add(agente);
+			}
+		}
+		return personasMayores30;
+	}
 
 
 
